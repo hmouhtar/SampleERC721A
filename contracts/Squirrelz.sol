@@ -1,4 +1,6 @@
-pragma solidity ^0.8.4;
+// SPDX-License-Identifier: MIT
+// solhint-disable-next-line
+pragma solidity 0.8.16;
 
 import "@divergencetech/ethier/contracts/erc721/BaseTokenURI.sol";
 import "@divergencetech/ethier/contracts/erc721/ERC721ACommon.sol";
@@ -7,7 +9,10 @@ contract Squirrelz is ERC721ACommon, BaseTokenURI {
     constructor()
         ERC721ACommon("Squirrelz", "SQUIRRELZ", payable(address(this)), 10)
         BaseTokenURI("ipfs://QmQsrxb2MSVZSJfC61ukoJm9dkPJD3z2aCzyHmq4Pz3Nm8/")
-    {}
+    // solhint-disable-next-line no-empty-blocks
+    {
+
+    }
 
     /**
     @dev Required override to select the correct baseTokenURI.
